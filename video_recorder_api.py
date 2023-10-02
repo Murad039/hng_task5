@@ -1,16 +1,8 @@
 from flask import Flask, request, jsonify, send_file,send_from_directory
 from pathlib import Path
 import os
-import whisper
-from whisper_transcribe import Transcriber
-import subprocess
 from flask_cors import CORS
-import pika
-import uuid
 import datetime
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
