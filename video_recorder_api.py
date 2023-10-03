@@ -12,7 +12,7 @@ CORS(app)
 DESKTOP_PATH = Path.home() / "Desktop"
 
 #folder name
-FOLDER_NAME = "apiVideos"
+FOLDER_NAME = "Videos"
 
 #create a folder if it doesn't exist
 FOLDER_PATH = DESKTOP_PATH/ FOLDER_NAME
@@ -37,7 +37,7 @@ def upload_file():
         #check the video size
         file_size = os.path.getsize(file_path)
         #define thershold
-        max_video_size = 10*1024*1024 #10MB
+        max_video_size = 250*1024*1024 #250MB
 
         #check if the size exceeds the thershold
         if file_size> max_video_size:
