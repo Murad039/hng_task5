@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c60454cf-c457-4ef5-b324-4febfc959eb9",
+		"_postman_id": "db787fac-4933-44e2-a10e-ddc3ccf8ccf4",
 		"name": "New Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29682283"
@@ -22,15 +22,13 @@
 					]
 				},
 				"url": {
-					"raw": "http://127.0.0.1:14564/api/upload",
-					"protocol": "http",
+					"raw": "https://video-recorder-twhn.onrender.com/api/upload",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"video-recorder-twhn",
+						"onrender",
+						"com"
 					],
-					"port": "14564",
 					"path": [
 						"api",
 						"upload"
@@ -43,7 +41,20 @@
 			"name": "New Request",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://video-recorder-twhn.onrender.com/api/videos",
+					"protocol": "https",
+					"host": [
+						"video-recorder-twhn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"videos"
+					]
+				}
 			},
 			"response": []
 		},
@@ -51,7 +62,21 @@
 			"name": "New Request",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://video-recorder-twhn.onrender.com/api/videos/recent",
+					"protocol": "https",
+					"host": [
+						"video-recorder-twhn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"videos",
+						"recent"
+					]
+				}
 			},
 			"response": []
 		}
