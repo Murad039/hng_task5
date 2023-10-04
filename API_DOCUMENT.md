@@ -1,4 +1,4 @@
-#deployed on render : https://video-recorder-twhn.onrender.com/
+#deployed on render : https://new-recorder.onrender.com/
 # Technical Documentation for Screen Recording Chrome Extension Backend API
 
 
