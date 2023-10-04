@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, send_file,send_from_directory
 from pathlib import Path
+from whisper_transcribe import Transcriber
 import os
 import subprocess
 from flask_cors import CORS
@@ -79,6 +80,11 @@ def get_last_video():
             return jsonify({"message": "theres is no video"})
         contents_sorted = sorted(contents, key= lambda x:os.path.getmtime(
             os.path.join(FOLDER_PATH, x)), reverse= True )
+        record_path = str(FOLDER_PATH/contents_sorted[0])
+
+        with Transcriber(api_key=os.getenv("ScreenAPI")) as t:
+            transcription = t.transcribe(record_path)
+        return {"recent_file": contents_sorted[0], "transcription": transcription}    
 
         return jsonify({"most_recent_file":contents_sorted[0]}), 200
     except IndexError:
